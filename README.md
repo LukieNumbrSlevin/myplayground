@@ -1,7 +1,13 @@
 ## Welcome to the NPGW GitHub
 
-Text...
+This page contains the source code for all of our APIs, SDKs and our Open API specifications for NPGW merchants.
 
-### Our documentation pages :
+### Prerequisites
 
-Text...
+Text
+
+## Our documentation pages :
+
+* Technical Documentation
+* API explorer
+* Test cards
