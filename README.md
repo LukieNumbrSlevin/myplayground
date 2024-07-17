@@ -16,3 +16,7 @@ The NPGW APIs have been created using the principles of REST. They will accept a
 * Technical Documentation
 * API explorer
 * Test cards
+
+## 👩‍💻 Support
+
+If you have a feature request, or spotted a bug or a technical problem, contact our Team.
