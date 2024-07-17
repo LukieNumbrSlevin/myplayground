@@ -1,7 +1,7 @@
-# Welcome to the NPGW GitHub
+## Welcome to the NPGW GitHub
 
 Text...
 
-## Our documentation pages :
+### Our documentation pages :
 
 Text...
