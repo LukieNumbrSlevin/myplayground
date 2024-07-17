@@ -2,7 +2,7 @@
 
 NPGW provides various APIs to help you accept payments on your website or mobile application.
 
-This repository contains NPGW API definition files, represented in the OpenAPI Specification standard (formerly known as Swagger Specification).
+This repository contains NPGW API definition files, represented in the [OpenAPI Specification](https://www.openapis.org/) standard (formerly known as Swagger Specification).
 
 The NPGW APIs have been created using the principles of REST. They will accept and return JSON-encoded bodies and responses, while using standard HTTP response codes & authentication.
 
