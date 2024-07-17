@@ -13,8 +13,8 @@ The NPGW APIs have been created using the principles of REST. They will accept a
 
 ## 📜 Documentation
 
-* Technical Documentation
-* OpenAPI specification
+* [Technical Documentation](https://npgw.github.io/npgw-api-specification/)
+* [OpenAPI specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/NPGW/npgw-api-specification/main/api-merchant.yaml)
 * Test cards
 
 ### Usage
