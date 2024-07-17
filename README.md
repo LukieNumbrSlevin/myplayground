@@ -14,9 +14,16 @@ The NPGW APIs have been created using the principles of REST. They will accept a
 ## 📜 Documentation
 
 * Technical Documentation
-* API explorer
+* OpenAPI specification
 * Test cards
+
+### Usage
+
+There are multiple ways you can use the OpenAPI definition to explore the NPGW APIs:
+
+* By using the classic Swagger toolset, upload these definitions to the Swagger Editor or SwaggerHub.
+* By using Postman to import the API definition and create your personal collection of requests.
 
 ## 👩‍💻 Support
 
-If you have a feature request, or spotted a bug or a technical problem, contact our Team.
+If you have a feature request, spotted a bug or a technical problem, contact our Team.
