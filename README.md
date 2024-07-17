@@ -24,6 +24,17 @@ There are multiple ways you can use the OpenAPI definition to explore the NPGW A
 * By using the classic Swagger toolset, upload these definitions to the [Swagger Editor](http://editor.swagger.io/) or [SwaggerHub](https://swaggerhub.com/).
 * By using [Postman](https://www.getpostman.com/postman) to import the API definition and create your personal collection of requests.
 
+### Test cards
+
+| PAN | 3DS2 test scenario | Outcome |
+| :--- | :--- | :--- |
+| 2303779999000275 | Frictionless (3DS Status != C) | Success |
+| 2303779999000408 | Challenge (3DS Status == C) | Success |
+| 2303779999000291 | Frictionless (3DS Status == N) | Failed (Not Authenticated) |
+| 2303779999000317 | Frictionless (3DS Status == U) | Failed (Unavailable) |
+| 2303779999000424 | Challenge (3DS Status == N) | Failed (Not Authenticated) |
+| 2303779999000432 | Challenge (3DS Status == U) | Failed (Unavailable) |
+
 ## 👩‍💻 Support
 
 If you have a feature request, spotted a bug or a technical problem, contact our [Team](mailto:helpdesk@expefast.com).
