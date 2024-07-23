@@ -27,11 +27,6 @@ There are multiple ways you can use the OpenAPI definition to explore the NPGW A
 
 Below you will find test cards to be used in the Sandbox/Stage environment for testing the listed transaction senarios.
 
-❕ **NOTE:**
-* Any text for cardholder name, a future date for expiry, and three (3) numbers for cvv are accepted.
-* Enter any four (4) numbers if presented with a challenge prompt for 3DS
-* Test cards will not be accepted on Production
-
 | PAN | 3DS2 test scenario | Outcome |
 | :--- | :--- | :--- |
 | 2303779999000275 | Frictionless (3DS Status != C) | Success |
@@ -40,6 +35,11 @@ Below you will find test cards to be used in the Sandbox/Stage environment for t
 | 2303779999000317 | Frictionless (3DS Status == U) | Failed (Unavailable) |
 | 2303779999000424 | Challenge (3DS Status == N) | Failed (Not Authenticated) |
 | 2303779999000432 | Challenge (3DS Status == U) | Failed (Unavailable) |
+
+❕ **NOTE:**
+* _Any text for cardholder name, a future date for expiry, and three (3) numbers for cvv are accepted_
+* _Enter any four (4) numbers if presented with a challenge prompt for 3DS_
+* _Test cards will not be accepted on Production_
 
 ## 👩‍💻 Support
 
