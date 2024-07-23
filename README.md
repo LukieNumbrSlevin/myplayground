@@ -27,7 +27,7 @@ There are multiple ways you can use the OpenAPI definition to explore the NPGW A
 
 Below you will find test cards to be used in the Sandbox/Stage environment for testing the listed transaction senarios.
 
-❕ _NOTE:_
+❕ **NOTE:**
 * Any text for cardholder name, a future date for expiry, and three (3) numbers for cvv are accepted.
 * Enter any four (4) numbers if presented with a challenge prompt for 3DS
 * Test cards will not be accepted on Production
