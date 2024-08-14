@@ -17,12 +17,16 @@ The NPGW APIs have been created using the principles of REST. They will accept a
 * [Technical Documentation](https://npgw.github.io/npgw-api-specification/)
 * [API Wiki](https://npgw.notion.site/NPGW-API-Explorer-08bd820fcb3342b9aa9db3e7daabfccf)
 
+### Definitions
+
+The API definition in this repository is provided in YAML format.
+
 ### Usage
 
-There are multiple ways you can use the OpenAPI specification to explore the NPGW APIs:
+There are multiple ways you can use the OpenAPI definition to explore the NPGW APIs:
 
-* By using the classic Swagger toolset, upload the specification to the [Swagger Editor](http://editor.swagger.io/) or [SwaggerHub](https://swaggerhub.com/).
-* By using [Postman](https://www.getpostman.com/postman) to import the API specification and create your personal collection of requests.
+* By using the classic Swagger toolset, upload the definition to the [Swagger Editor](http://editor.swagger.io/) or [SwaggerHub](https://swaggerhub.com/).
+* By using [Postman](https://www.getpostman.com/postman) to import the API definition and create your personal collection of requests.
 
 ## 👩‍💻 Support
 
