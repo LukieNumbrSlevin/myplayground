@@ -195,7 +195,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Transaction'
+              $ref: '#/components/schemas/Authorization'
         required: true
       responses:
         '200':
@@ -208,6 +208,7 @@ paths:
           $ref: '#/components/responses/Validation'
         '500':
           $ref: '#/components/responses/Error'
+  # End
 
 components:
   securitySchemes:
@@ -560,3 +561,12 @@ components:
           properties:
             customerDetails:
               $ref: '#/components/schemas/CustomerDetails'
+
+    # For illustrative purposes
+    Authorization:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransaction'
+        - type: object
+          properties:
+            customerDetails:
+              $ref: '#/components/schemas/CustomerDetails'    
