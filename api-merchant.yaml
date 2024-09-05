@@ -175,14 +175,14 @@ paths:
           $ref: '#/components/responses/BadRequest'
 
   # For illustrative purposes
-  /auth:
+  /authorization:
     post:
       tags:
         - payment
       summary: Create a new CreditCard Authorization.
       description: |
         A successful request will return a secure payment URL via **{body.paymentUrl}** to which the customer should be redirected to complete online 3DSecure authentication with their bank. Payments will proceed to Authorization on successful authentication by the customer.
-      operationId: createTransaction
+      operationId: createAuthorization
       security:
         - bearerAuth: []
       parameters:
@@ -208,6 +208,105 @@ paths:
           $ref: '#/components/responses/Validation'
         '500':
           $ref: '#/components/responses/Error'
+  
+  /capture/{transactionId}:
+    post:
+      tags: 
+        - payment
+      summary: Capture a CreditCard Authorization
+      description: Capture a Transaction that has been previously Authorized
+      operationId: captureAuthorization
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: transactionId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Capture'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+          description: Everything works as expected.
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '405':
+          $ref: '#/components/responses/BadRequest'
+  
+  /cancel/{transactionId}:
+    put:
+      tags: 
+        - refund
+      summary: Cancel a CreditCard Payment that has not been Captured or settled
+      description: Cancel a Transaction before it is captured or settled
+      operationId: cancelTransaction
+      security:
+        - bearerAuth: []      
+      parameters:
+        - in: path
+          name: transactionId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Refund'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+          description: Everything works as expected.
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '405':
+          $ref: '#/components/responses/BadRequest'
+
+  /refund/{transactionId}:
+    post:
+      tags: 
+        - refund
+      summary: Refund a CreditCard Payment that has been Captured or settled
+      description: Refund a Transaction after it has been captured or settled
+      operationId: refundTransaction
+      security:
+        - bearerAuth: []      
+      parameters:
+        - in: path
+          name: transactionId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Refund'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+          description: Everything works as expected.
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '405':
+          $ref: '#/components/responses/BadRequest'          
   # End
 
 components:
@@ -266,6 +365,31 @@ components:
       description: Everything works as expected.
 
   schemas:
+    # For illustrative purposes
+    Capture:
+      type: object
+      required:
+        - name
+        - password
+      properties:
+        amount:
+          type: string
+        currency:
+          type: string
+
+    Refund:
+      type: object
+      required:
+        - name
+        - password
+      properties:
+        amount:
+          type: string
+        currency:
+          type: string
+
+    # End
+    
     Error:
       type: object
       properties:
