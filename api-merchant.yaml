@@ -42,6 +42,8 @@ tags:
     externalDocs:
       description: Available Test Cards
       url: https://npgw.notion.site/NPGW-Merchant-API-Wiki-08bd820fcb3342b9aa9db3e7daabfccf?pvs=97#d91314e331f5481d9015bb6897dfcca9
+  - name: refund
+    description: Refund a Payment processed on the NPGW Gateway
   - name: status
     description: Query the status of a Transaction on the NPGW Gateway.
 
@@ -171,6 +173,41 @@ paths:
           $ref: '#/components/responses/Unauthorized'
         '405':
           $ref: '#/components/responses/BadRequest'
+
+  # For illustrative purposes
+  /auth:
+    post:
+      tags:
+        - payment
+      summary: Create a new CreditCard Authorization.
+      description: |
+        A successful request will return a secure payment URL via **{body.paymentUrl}** to which the customer should be redirected to complete online 3DSecure authentication with their bank. Payments will proceed to Authorization on successful authentication by the customer.
+      operationId: createTransaction
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: async
+          schema:
+            type: boolean
+          description: Indicates whether the transaction should be processed asynchronously from our downstream CreditCard Acquirers. When set to true, the request will return immediately with a status indicating that processing is ongoing.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+        required: true
+      responses:
+        '200':
+          $ref: '#/components/responses/TransactionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/Validation'
+        '500':
+          $ref: '#/components/responses/Error'
 
 components:
   securitySchemes:
