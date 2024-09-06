@@ -42,8 +42,10 @@ tags:
     externalDocs:
       description: Available Test Cards
       url: https://npgw.notion.site/NPGW-Merchant-API-Wiki-08bd820fcb3342b9aa9db3e7daabfccf?pvs=97#d91314e331f5481d9015bb6897dfcca9
+  - name: capture
+    description: Manage Authorizations procesed on the NPGW Gateway.
   - name: refund
-    description: Refund a Payment processed on the NPGW Gateway
+    description: Refund a Payment processed on the NPGW Gateway.
   - name: status
     description: Query the status of a Transaction on the NPGW Gateway.
 
@@ -212,7 +214,7 @@ paths:
   /capture/{transactionId}:
     post:
       tags: 
-        - payment
+        - capture
       summary: Capture a CreditCard Authorization
       description: Capture a Transaction that has been previously Authorized
       operationId: captureAuthorization
@@ -245,7 +247,7 @@ paths:
   /cancel/{transactionId}:
     put:
       tags: 
-        - refund
+        - capture
       summary: Cancel a CreditCard Payment that has not been Captured or settled
       description: Cancel a Transaction before it is captured or settled
       operationId: cancelTransaction
