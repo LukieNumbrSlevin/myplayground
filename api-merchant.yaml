@@ -15,9 +15,6 @@ info:
     Useful links:
     - [Merchant API GitHub repo](https://github.com/NPGW/npgw-api-specification)
     - [Merchant API YAML definition](https://github.com/NPGW/npgw-api-specification/blob/main/api-merchant.yaml)
-    - [Merchant API Wiki](https://npgw.notion.site/NPGW-Merchant-API-Wiki-08bd820fcb3342b9aa9db3e7daabfccf)
-
-    Changes from VS Code here...
   x-meta:
     Title: API and SDK Documentation
     Author: NPGW
