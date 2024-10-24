@@ -1,7 +1,5 @@
 ## 👋 Welcome to the NPGW GitHub 👋
 
-VS CODE INSERT
-
 NPGW provides various APIs to help you accept payments on your website or mobile application.
 
 This repository contains NPGW API definition files, represented in the [OpenAPI Specification](https://www.openapis.org/) standard (formerly known as Swagger Specification).
@@ -33,3 +31,7 @@ There are multiple ways you can use the OpenAPI definition to explore the NPGW A
 ## 👩‍💻 Support
 
 If you have a feature request, spotted a bug or a technical problem, contact our [Team](mailto:helpdesk@expefast.com).
+
+## new section
+
+Random text
