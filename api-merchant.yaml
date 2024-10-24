@@ -4,6 +4,10 @@ info:
   title: NPGW Merchant API - Luke's repository
   version: 0.1.6
   description: |
+    **New Section**
+
+    Text here
+    
     **Overview**
 
     Use this API to integrate CreditCard processing capabilities into your application and track transaction statuses. The API supports both stage and production environments with distinct URLs.
@@ -11,8 +15,6 @@ info:
     **Usage**
 
     The endpoints provided include operations for generating authentication tokens, creating new transactions and retrieving transaction details for CreditCard payments.
-
-    UPDATE MADE VIA VSCODE
 
     Useful links:
     - [Merchant API GitHub repo](https://github.com/NPGW/npgw-api-specification)
