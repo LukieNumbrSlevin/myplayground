@@ -2,7 +2,7 @@ openapi: 3.0.3
 
 info:
   title: NPGW Merchant API - Luke's repository
-  version: 0.1.5
+  version: 0.1.6
   description: |
     **Overview**
 
